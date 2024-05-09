@@ -35,6 +35,13 @@ public class AlumnoControlador {
         return ResponseEntity.ok(estudianteActualizadoResultado);
     }
 
+    @GetMapping("/buscar")
+    public ResponseEntity<List<Alumno>> buscarEstudiantes(@RequestParam String nombre) {
+        List<Alumno> estudiantes = repositorio.NombreContaining(nombre);
+        return ResponseEntity.ok().body(estudiantes);
+    }
+
+
     @DeleteMapping("/{id}")
     public ResponseEntity<Object> eliminarEstudiante(@PathVariable Long id) {
         repositorio.deleteById(id);
