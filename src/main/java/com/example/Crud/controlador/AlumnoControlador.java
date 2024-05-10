@@ -11,7 +11,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/v1/")
-@CrossOrigin(origins = "http://localhost:4200/")
+@CrossOrigin(origins = "https://crud-420e9.firebaseapp.com/")
 public class AlumnoControlador {
 
     @Autowired
