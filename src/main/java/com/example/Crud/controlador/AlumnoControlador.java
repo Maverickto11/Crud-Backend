@@ -1,5 +1,6 @@
 package com.example.Crud.controlador;
 
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.http.ResponseEntity;
 import com.example.Crud.alumnoServicio.AlumnoServicio;
 import com.example.Crud.modelo.Alumno;
