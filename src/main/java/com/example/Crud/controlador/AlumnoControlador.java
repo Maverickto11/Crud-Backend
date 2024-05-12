@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/v1/")
+@RequestMapping("/api/")
 @CrossOrigin(origins = "https://crud-420e9.web.app")
 
 public class AlumnoControlador {
