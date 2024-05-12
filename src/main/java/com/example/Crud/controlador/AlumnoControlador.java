@@ -12,8 +12,6 @@ import java.util.List;
 @RestController
 @RequestMapping("/api/v1/")
 @CrossOrigin(origins = "https://jade-lollipop-a7dd65.netlify.app")
-//@CrossOrigin(origins = "*")
-
 public class AlumnoControlador {
 
     @Autowired
