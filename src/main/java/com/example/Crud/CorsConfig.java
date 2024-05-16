@@ -13,9 +13,14 @@ public class CorsConfig {
         return new WebMvcConfigurer() {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
-                registry.addMapping("/**").allowedOrigins("https://crud-estudiantes-d1a57.web.app").allowedMethods("*");
+                registry.addMapping("/**")
+                        .allowedOrigins("https://crud-estudiantes-d1a57.web.app")
+                        .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
+                        .allowedHeaders("*")
+                        .allowCredentials(true);
             }
         };
     }
 }
+
 
