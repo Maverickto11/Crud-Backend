@@ -21,15 +21,16 @@ import java.util.Arrays;
 @Configuration
 public class CorsConfig {
     @Bean
-    public CorsFilter corsFilter() {
+    public CorsConfigurationSource corsConfigurationSource() {
+        CorsConfiguration configuration = new CorsConfiguration();
+        configuration.setAllowCredentials(true);
+        configuration.addAllowedOrigin("https://crud-estudiantes-d1a57.web.app"); // Specify your Angular app domain
+        configuration.addAllowedHeader("*");
+        configuration.addAllowedMethod("*");
+
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
-        CorsConfiguration config = new CorsConfiguration();
-        config.setAllowCredentials(true);
-        config.addAllowedOrigin("https://crud-estudiantes-d1a57.web.app"); // Cambia a tu dominio de Angular
-        config.addAllowedHeader("*");
-        config.addAllowedMethod("*");
-        source.registerCorsConfiguration("/**", config);
-        return new CorsFilter(source);
+        source.registerCorsConfiguration("/**", configuration);
+        return source;
     }
 }
 
