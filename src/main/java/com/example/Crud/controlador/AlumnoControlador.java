@@ -21,7 +21,7 @@ public class AlumnoControlador {
     @Autowired
     private AlumnoServicio estudianteService;
 
-    @CrossOrigin(origins = "https://crud-estudiantes-d1a57.web.app")
+   // @CrossOrigin(origins = "https://crud-estudiantes-d1a57.web.app")
     @GetMapping("/Alumno")
     public List<Alumno> ListaAlumno(){
         return repositorio.findAll();
