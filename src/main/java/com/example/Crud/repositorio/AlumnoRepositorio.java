@@ -9,6 +9,5 @@ import java.util.List;
 @Repository
 public interface AlumnoRepositorio extends JpaRepository<Alumno, Long> {
     //Alumno findByCorreo(String email);
-    List<Alumno> NombreContaining(String nombre);
 
 }

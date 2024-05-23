@@ -4,12 +4,17 @@ import com.example.Crud.modelo.Alumno;
 import com.example.Crud.repositorio.AlumnoRepositorio;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import java.util.List;
 
 @Service
 public class AlumnoServicio {
 
     @Autowired
     private AlumnoRepositorio estudianteRepository;
+
+    public List<Alumno> obtenerTodosLosProductos() {
+        return estudianteRepository.findAll();
+    }
 
     public Alumno actualizarEstudiante(Long id, Alumno estudianteActualizado) {
         Alumno estudianteExistente = estudianteRepository.findById(id)
