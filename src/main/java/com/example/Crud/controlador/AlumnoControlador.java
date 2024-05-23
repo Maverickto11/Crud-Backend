@@ -22,9 +22,9 @@ public class AlumnoControlador {
     private AlumnoServicio estudianteService;
 
     @CrossOrigin(origins = "https://crud-estudiantes-d1a57.web.app")
-    @GetMapping
+    @GetMapping("/Alumno")
     public List<Alumno> ListaAlumno(){
-        return estudianteService.obtenerTodosLosProductos();
+        return repositorio.findAll();
     }
     
     @PostMapping("/Alumno")
@@ -38,11 +38,11 @@ public class AlumnoControlador {
         return ResponseEntity.ok(estudianteActualizadoResultado);
     }
 
-    /*@GetMapping("/buscar")
+    @GetMapping("/buscar")
     public ResponseEntity<List<Alumno>> buscarEstudiantes(@RequestParam String nombre) {
         List<Alumno> estudiantes = repositorio.NombreContaining(nombre);
         return ResponseEntity.ok().body(estudiantes);
-    }*/
+    }
 
 
     @DeleteMapping("/{id}")
