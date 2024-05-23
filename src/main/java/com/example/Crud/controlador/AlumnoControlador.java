@@ -22,7 +22,7 @@ public class AlumnoControlador {
     private AlumnoServicio estudianteService;
 
     @CrossOrigin(origins = "https://crud-estudiantes-d1a57.web.app")
-    @GetMapping("/Alumno")
+    @GetMapping
     public List<Alumno> ListaAlumno(){
         return repositorio.findAll();
     }
